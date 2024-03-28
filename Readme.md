@@ -37,7 +37,7 @@ Here's a brief overview of how to use PuzzleFX:
 
 ## Contributors
 
-- [Asadullah Imran](https://github.com/Asadullah-Imran) - Sexy Developer.
+- [Asadullah Imran](https://github.com/Asadullah-Imran) .
 
 ## License
 
