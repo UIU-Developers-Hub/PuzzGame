@@ -33,7 +33,7 @@ PuzzleFX is a JavaFX application that allows users to play picture puzzle games.
 
 ## Contributors
 
-- [Asadullah Imran](https://github.com/Asadullah-Imran) - Sexy Developer.
+- [Asadullah Imran](https://github.com/Asadullah-Imran) .
 
 ## License
 
