@@ -8,7 +8,9 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -23,15 +25,12 @@ import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class PuzzGame extends Application {
     public static Stage primaryStage;
-    private int gridSize = 3;
-    private int gridSquare=150;
+    private static int gridSize = 3;
+    private static int gridSquare=150;
     private List<Button> buttons = new ArrayList<>();
     private List<Button> mainButtons = new ArrayList<>();
     private Image originalImage,whitePic;
@@ -70,7 +69,7 @@ public class PuzzGame extends Application {
         Random rand= new Random();
          int index = rand.nextInt(imagePath.length);
         originalImage = new Image(imagePath[index]);
-        whitePic = new Image("/whitepic.png");
+        whitePic = loadImage("/whitepic.png",gridSquare,gridSquare);
         List<Image> imageTiles = splitImage(originalImage);
 
         //Shuffle image tiles
@@ -207,7 +206,7 @@ public class PuzzGame extends Application {
         gridSizeComboBox.setOnAction(event -> {
             gridSize = gridSizeComboBox.getValue(); // Update grid size when selected
             gridSquare=(int)(450/gridSize);
-            showGame(); // Reset the game with the new grid size
+            new PuzzGame().showGame(); // Reset the game with the new grid size
         });
 
 
@@ -263,8 +262,8 @@ public class PuzzGame extends Application {
                 }
                 ImageView imageView = new ImageView(image);
                 imageView.setViewport(new Rectangle2D(x * width, y * height, width, height));
-                imageView.setFitWidth(150);
-                imageView.setFitHeight(150);
+                imageView.setFitWidth(gridSquare);
+                imageView.setFitHeight(gridSquare);
                 imageTiles.add(imageView.snapshot(null, null));
             }
         }
@@ -340,7 +339,34 @@ public class PuzzGame extends Application {
          timeString = String.format("You Solved the puzzle within "+"%02d:%02d:%02d", hours, minutes, seconds);
     }
 
+    public  Image loadImage(String imagePath, int width, int height) {
+        return new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePath)), width, height, true, true);
+    }
+
     public static void exit(){
         Platform.exit();
+    }
+    public static void exitWithConfirmation() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit Confirmation");
+        alert.setHeaderText("Are you sure you want to exit?");
+        alert.setContentText("Exiting the game will end your current session.");
+
+        // Add "Yes" and "No" buttons to the confirmation dialog
+        ButtonType buttonTypeYes = new ButtonType("Yes");
+        ButtonType buttonTypeNo = new ButtonType("No");
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo);
+
+        // Custom CSS for the dialog
+        alert.getDialogPane().getStylesheets().add(
+                PuzzGame.class.getResource("/com/example/puzzlefx/style.css").toExternalForm());
+        alert.initStyle(StageStyle.TRANSPARENT); // Transparent style for a sleek look
+
+        // Handle button actions
+        alert.showAndWait().ifPresent(buttonType -> {
+            if (buttonType == buttonTypeYes) {
+                Platform.exit(); // Exit the application
+            }
+        });
     }
 }

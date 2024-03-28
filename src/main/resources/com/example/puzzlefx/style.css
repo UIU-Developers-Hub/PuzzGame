@@ -1,0 +1,44 @@
+/* styles.css */
+
+.alert {
+    -fx-background-color: #f4f0f0; /* Light gray background color */
+}
+
+.alert .dialog-pane {
+    -fx-background-color: transparent; /* Transparent background */
+}
+
+.alert .dialog-pane .content {
+    -fx-font-size: 14px;
+}
+
+.alert .dialog-pane .header-panel {
+    -fx-background-color: #2196F3; /* Blue header background color */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.alert .dialog-pane .header-panel .label {
+    -fx-text-fill: white; /* White text color */
+}
+
+.alert .button-bar {
+    -fx-background-color: #f4f0f0; /* Light gray background color */
+}
+
+.alert .button-bar .button {
+    -fx-background-color: #4CAF50; /* Green button background color */
+    -fx-text-fill: white; /* White text color */
+}
+
+.alert .button-bar .button:hover {
+    -fx-background-color: #388E3C; /* Darker green hover color */
+}
+
+.alert .button-bar .button:pressed {
+    -fx-background-color: #2E7D32; /* Even darker green pressed color */
+}
+
+.alert .button-bar .button:default {
+    -fx-background-color: #388E3C; /* Darker green default button color */
+}

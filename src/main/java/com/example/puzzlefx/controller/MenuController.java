@@ -26,7 +26,7 @@ public class MenuController {
 
     @FXML
     public void exit(ActionEvent event) {
-        PuzzGame.exit();
+        PuzzGame.exitWithConfirmation();
     }
 
     @FXML
