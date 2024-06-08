@@ -43,6 +43,10 @@ public class PuzzGame extends Application {
     public void start(Stage stage) throws Exception {
         primaryStage = stage; //as we have a static Stage variable . we initialize the value as game stage of start method
         menuPage();
+
+        Image icon = new Image(getClass().getResourceAsStream("/icon.png"));
+
+        primaryStage.getIcons().add(icon);
         primaryStage.setTitle("Powered By return_3;"); //set the title of the stage
         primaryStage.initStyle(StageStyle.UNDECORATED); //create un decorated style
         primaryStage.show(); //by
@@ -65,7 +69,7 @@ public class PuzzGame extends Application {
         gridPane.setVgap(2);
 
         //LOAD the image
-        imagePath= new String[]{"/elephant.png","/jiraffe.png","/tiger.png","/whitetiger.png"};
+        imagePath= new String[]{"/elephant.png","/tiger.png","/dm.png","/dm2.png","/fn.png","/fn2.png","/httyd.png","/httyd2.png","/kfp.png"};
         Random rand= new Random();
          int index = rand.nextInt(imagePath.length);
         originalImage = new Image(imagePath[index]);
