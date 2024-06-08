@@ -2,6 +2,11 @@
 
 PuzzleFX is a JavaFX application that allows users to play picture puzzle games. It provides a simple user interface for shuffling and solving puzzles.
 
+![PuzzleFX Screenshot](src/main/resources/ss1.png)
+![PuzzleFX Screenshot](src/main/resources/ss2.png)
+![PuzzleFX Screenshot](src/main/resources/ss3.png)
+![PuzzleFX Screenshot](src/main/resources/ss4.png)
+
 ## Features
 PuzzleFX offers the following features to enhance your gaming experience:
 
