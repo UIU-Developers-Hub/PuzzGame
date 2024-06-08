@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.puzzlefx.controller.CongratulationController">
    <children>
-      <ImageView fitHeight="739.0" fitWidth="757.0" opacity="0.34" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="600.0" fitWidth="700.0" layoutX="50.0" opacity="0.34" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../menu.png" />
          </image>
