@@ -43,6 +43,25 @@ Here's a brief overview of how to use PuzzleFX:
 - Once the puzzle is solved, a congratulation message will be displayed with the time taken to solve the puzzle.
 - in the Congratulations message you can also see the time taken to solve the puzzle.
 
+## How to Contribute
+Welcome contributions to make PuzzleFX even better! If you have ideas or want to solve any existing issues, follow these steps to contribute:
+1. Fork this repository to your GitHub account.
+2. Create a new branch for your feature or bug fix:
+```bash
+git checkout -b feature/your-feature-name
+```
+3. Make your changes and commit them with a descriptive message:
+```bash
+git commit -m "Add feature or fix description"
+```
+4. Push your changes to your forked repository:
+```bash
+git push origin feature/your-feature-name
+```
+5. Submit a pull request from your branch to the main repository.
+
+Once your pull request is reviewed and approved, your contribution will be merged into the main repository. We appreciate your help in improving PuzzleFX!
+
 ## Contributors
 
 - [Asadullah Imran](https://github.com/Asadullah-Imran) .
