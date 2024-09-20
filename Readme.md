@@ -17,7 +17,10 @@ PuzzleFX offers the following features to enhance your gaming experience:
 - **Congratulation Message:** Receive a congratulation message upon successfully solving the puzzle, along with the time taken to complete it.
 
 ## Getting Started
+**Prerequisites:** Before running the game, make sure you have JavaFX properly set up in your system.
+
 To start playing PuzzleFX, follow these simple steps:
+
 
 1. Clone this repository to your local machine.
 2. Open the project in your favorite Java IDE.
